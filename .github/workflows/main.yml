@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          reff: rosemary
           fetch-depth: 1
 
       - name: Install dependencies
