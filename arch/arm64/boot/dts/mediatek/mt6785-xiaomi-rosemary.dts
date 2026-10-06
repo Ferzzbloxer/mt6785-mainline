@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+
+/dts-v1/;
+
+#include "mt6785-xiaomi-begonia-common.dtsi"
+
+/ {
+	model = "Xiaomi Redmi Note 10S";
+	compatible = "xiaomi,rosemary", "mediatek,mt6785";
+};
+
+&panel {
+	compatible = "novatek,nt35695";
+	status = "disabled";
+};
+
+&i2c0 {
+	status = "okay";
+
+	gt1151@14 {
+		compatible = "goodix,gt1151";
+		reg = <0x14>;
+		status = "okay";
+	};
+
+	gt9886@5d {
+		compatible = "goodix,gt9886";
+		reg = <0x5d>;
+		status = "disabled";
+	};
+};
